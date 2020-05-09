@@ -2,12 +2,30 @@ package A03_DoubleLinkedList;
 
 public class DoubleLinkedList<T>
 {
+    private Node<T> first;
+    private Node<T> last;
+    private Node<T> current;
 
     /**
      * Einfügen einer neuen <T>
      * @param a <T>
      */
     public void add(T a) {
+
+        Node<T> n = new Node<>(a);
+        if(current == null){
+            first = null;
+            last = null;
+            current = n;
+        }else{
+            last = current;
+            current = n;
+            first = current;
+            last.setNext(n);
+            current.setPrevious(last);
+        }
+
+
 
     }
 
