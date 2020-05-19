@@ -3,6 +3,7 @@ package A02_Queue;
 public class Queue<T>
 {
     private Node<T> first;
+    private int counter;
     
     private Node<T> last;
 
@@ -13,14 +14,18 @@ public class Queue<T>
      */
     public T dequeue() throws QueueEmptyException {
         // Exception wenn das erste Element null ist
+
+
         if(first == null){
             throw new QueueEmptyException();
         }
 
+        Node<T> temp;
+        temp = first;
+        first = first.getNext();
+        counter--;
 
-
-
-    	return null;
+    	return (T) temp.getData();
     }
     
     
@@ -32,13 +37,14 @@ public class Queue<T>
     public void enqueue(T i) {
 
         Node<T> n = new Node(i);
-
+        counter++;
         if(first == null){
             first = n;
             last = n;
+
         }else{
 
-                first.setNext(n);
+                last.setNext(n);
                 last = n;
 
         }
@@ -51,6 +57,6 @@ public class Queue<T>
      * @return
      */
     public int getCount() {
-    	return 0;
+    	return this.counter;
     }
 }
