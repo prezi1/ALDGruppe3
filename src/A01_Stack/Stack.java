@@ -23,7 +23,7 @@ public class Stack<T>
         counter--;
         return  result.getData();
     }
-    
+
     /**
      * Übergebenen T auf Stack (als oberstes Element) speichern.
      * @param i data

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/A01_Stack/Stack.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A01_Stack/TestStack.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A02_Queue/Queue.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A02_Queue/TestQueue.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A03_DoubleLinkedList/DoubleLinkedList.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A03_DoubleLinkedList/TestDoubleLinkedList.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A04_TraverseTree/Wort.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A04_TraverseTree/Wörterbuch.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A04_TraverseTree/WörterbuchCountWordsTest.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A04_TraverseTree/WörterbuchWordsPrefixTest.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A05_Breitensuche/BaseTree.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A05_Breitensuche/Breitensuche.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A05_Breitensuche/Node.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A06_Tiefensuche/Film.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A06_Tiefensuche/Tiefensuche.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A09_ZyklenTiefensuche/Zyklen.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A09_ZyklenTiefensuche/ZyklenTest.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A10_DijkstraPQShortestPath/DijkstraPQShortestPath.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A10_DijkstraPQShortestPath/FindWay.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A11_DijkstraDGShortestPath/DijkstraDGShortestPath.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A11_DijkstraDGShortestPath/FindWay.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A12_DijkstraLand/Dijkstra.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/A13_MergeSort/MergeSort.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/basisAlgorithmen/FindWay.java" charset="windows-1252" />
+  </component>
+</project>

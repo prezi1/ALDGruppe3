@@ -41,7 +41,7 @@ public class Queue<T> {
         Node<T> n = new Node(i);
         counter++;
 
-        // Wenn first Null ist dan ist First und Last == n
+        // Wenn first Null ist dann ist First und Last == n
         if (first == null) {
             first = n;
 
