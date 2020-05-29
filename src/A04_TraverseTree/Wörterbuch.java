@@ -22,12 +22,18 @@ public class Wörterbuch {
      */
     public int countWordsInSubTree(Wort w) {
 
+        // kein  Objekt im Baum
+        if (w == null){
+            return 0;
+        }
         // Linker und rechter Teil Gleich Null - kein Kinder mehr vorhanden- Abbruchbedingung für Rekursion
         if (w.getRight() == null && w.getLeft() == null) {
             return 1;
         }
-        int right = countWordsInSubTree(w.getRight()); //Rechter Teilbaum
-        int left = countWordsInSubTree(w.getLeft()); // Linker Teilbaum
+        int right = 0;
+        if(w.getRight() != null){ right = countWordsInSubTree(w.getRight());} //Rechter Teilbaum
+        int left = 0;
+        if(w.getLeft() != null){ left = countWordsInSubTree(w.getLeft());} // Linker Teilbaum
 
         return right + left + 1; //Summe Kinder (Links & Rechts)  + Elternelement
     }
