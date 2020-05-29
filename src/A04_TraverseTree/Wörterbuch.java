@@ -47,12 +47,12 @@ public class Wörterbuch {
     public Set<String> getWordsWithPrefix(String prefix) {
 
         Wort wort = getRoot();
-
         Set<String> list = new HashSet<>();
 
         if (wort.getWort().startsWith(prefix)) {
             list.add(wort.getWort());
         }
+
         while (wort.getLeft() != null && wort.getRight() != null) {
 
           //  int val = wort.getWort().compareTo(prefix);
@@ -72,6 +72,20 @@ public class Wörterbuch {
 
         return list;
 
+    }
+
+     private Wort findPrefix(Wort current, String s) {
+        if (current == null) {
+            return null;
+        }
+        boolean vgl = current.getWort().startsWith(s);
+        if (vgl) {        // Gefunden
+            return current;
+        } else if (vgl < 0) {    // Links
+            return find(current.getLeft(), s);
+        } else {                // Rechts
+            return find(current.getRight(), s);
+        }
     }
 
 
