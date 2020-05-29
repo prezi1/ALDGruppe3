@@ -23,7 +23,7 @@ public class Wörterbuch {
     public int countWordsInSubTree(Wort w) {
 
         // kein  Objekt im Baum
-        if (w == null){
+        if (w == null) {
             return 0;
         }
         // Linker und rechter Teil Gleich Null - kein Kinder mehr vorhanden- Abbruchbedingung für Rekursion
@@ -31,9 +31,13 @@ public class Wörterbuch {
             return 1;
         }
         int right = 0;
-        if(w.getRight() != null){ right = countWordsInSubTree(w.getRight());} //Rechter Teilbaum
+        if (w.getRight() != null) {
+            right = countWordsInSubTree(w.getRight());
+        } //Rechter Teilbaum
         int left = 0;
-        if(w.getLeft() != null){ left = countWordsInSubTree(w.getLeft());} // Linker Teilbaum
+        if (w.getLeft() != null) {
+            left = countWordsInSubTree(w.getLeft());
+        } // Linker Teilbaum
 
         return right + left + 1; //Summe Kinder (Links & Rechts)  + Elternelement
     }
@@ -49,13 +53,17 @@ public class Wörterbuch {
         Wort wort = getRoot();
         Set<String> list = new HashSet<>();
 
-        if (wort.getWort().startsWith(prefix)) {
-            list.add(wort.getWort());
-        }
+     list = findPrefix(root,prefix);
 
-        while (wort.getLeft() != null && wort.getRight() != null) {
 
-          //  int val = wort.getWort().compareTo(prefix);
+        //if (wort.getWort().startsWith(prefix)) {
+        //  list.add(wort.getWort());
+        //}
+
+
+       /* while (wort.getLeft() != null && wort.getRight() != null) {
+
+            //  int val = wort.getWort().compareTo(prefix);
             int val = prefix.compareTo(wort.getWort());
 
             if (val < 0 && wort.getLeft() != null)
@@ -69,23 +77,32 @@ public class Wörterbuch {
                 list.add(wort.getWort());
             }
         }
-
+*/
         return list;
 
     }
 
-     private Wort findPrefix(Wort current, String s) {
+    private Set<String> findPrefix(Wort current, String s) {
+        Set<String> list = new HashSet<>();
+
         if (current == null) {
             return null;
         }
-        boolean vgl = current.getWort().startsWith(s);
-        if (vgl) {        // Gefunden
-            return current;
-        } else if (vgl < 0) {    // Links
-            return find(current.getLeft(), s);
-        } else {                // Rechts
-            return find(current.getRight(), s);
+
+        int compare = s.compareTo(current.getWort());
+        if (compare < 0) {    // Linker Teilbaum
+            if (current.getWort().startsWith(s)) {
+                list.add(current.getWort());
+            }
+            find(current.getLeft(), s);
+        } else {                // Rechter Teilbaum
+            if (current.getWort().startsWith(s)) {
+                list.add(current.getWort());
+            }
+            find(current.getRight(), s);
         }
+
+        return list;
     }
 
 
